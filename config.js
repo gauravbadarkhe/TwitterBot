@@ -6,5 +6,5 @@ module.exports.apiKeys_quotesBot = {
   access_token_secret:  'NMyRjxgnbxcAKC92YGcXJzTvbZfSZ8RzgblFIrKQPpZEp'
 };
 
-module.exports.screen_name = "bossofquotes";
+module.exports.screen_name = "bossofbots";
 module.exports.randomQuote = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
