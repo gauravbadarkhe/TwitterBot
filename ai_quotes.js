@@ -9,9 +9,17 @@ module.exports.react = function(tweet) {
 
 
     if (tweet_search.value.indexOf('weather') > -1) {
-        ai_weather.getWeather(user_mentions,ai_weather.getPlaceName(tweet.text), function(data) {
-            utils.tweetIt(data);
-        });
+      ai_nlp.getNouns(tweet.text,function(tags){
+        for (var i = 0; i < tags.length; i++) {
+
+          ai_weather.getWeather(user_mentions,tags[i], function(data) {
+              utils.tweetIt(data);
+
+          });
+        }
+        console.log("OK : "+JSON.stringify(tags));
+      });
+
 
         return
     }

@@ -10,7 +10,17 @@ fs = require('fs'); //Get node file system to manipulate files
 jsonquery = require('json-query'); // Get json-query to appy complex filters in JSON array/object
 createTextVersion = require("textversionjs"); //Strip HTML from string and get plain text verison
 Entities = require('html-entities').XmlEntities; //Strip HTML from string and get plain text verison
+ai_nlp = require('./ai_nlp');
+ fs = require('fs');
 
+// var cities;
+// fs.readFile( __dirname + '/cities.txt', function (err, data) {
+//   if (err) {
+//     throw err;
+//   }
+//   cities = data.toString();
+//   //console.log(data.toString().split(" "));
+// });
 
 entities = new Entities();
 T = new Twit(config.apiKeys_quotesBot);
